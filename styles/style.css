@@ -94,6 +94,13 @@ footer {
     width: 60%;
 }
 
-#vtuber-list-container{
+.vtuberBigImg {
+    width: 30%;
+}
+
+.vtuber-detail {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

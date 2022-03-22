@@ -29,12 +29,15 @@ export function renderVtuberDetail(vtuber) {
     nameEl.textContent = vtuber.first_name + ' ' + vtuber.last_name;
     nameEl.classList.add('name');
 
+    descriptionEl.textContent = vtuber.description;
+    descriptionEl.classList.add('description');
+
     //rest of the elements here
 
-    img.src = `../assets/${vtuber.last_name}.jpeg`;
+    img.src = `../assets/${vtuber.last_name}.png`;
+    img.classList.add('vtuberBigImg');
     
-    div.append(/*the stuff*/);
-
+    div.append(nameEl, img, descriptionEl);
     return div;
 
 }
