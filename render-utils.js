@@ -22,6 +22,9 @@ export function renderVtuberDetail(vtuber) {
     const div = document.createElement('div');
     const img = document.createElement('img');
     const descriptionEl = document.createElement('p');
+    const debutEl = document.createElement('p');
+    const unitEl = document.createElement('p');
+    const heightEl = document.createElement('p');
     const nameEl = document.createElement('p');
 
     div.classList.add('vtuber-detail');
@@ -29,15 +32,22 @@ export function renderVtuberDetail(vtuber) {
     nameEl.textContent = vtuber.first_name + ' ' + vtuber.last_name;
     nameEl.classList.add('name');
 
+    debutEl.textContent = 'Debut Date: ' + vtuber.debut;
+    debutEl.classList.add('debut');
+
+    unitEl.textContent = 'Unit: ' + vtuber.unit;
+    unitEl.classList.add('unit');
+
+    heightEl.textContent = 'Height: ' + vtuber.height + 'cm';
+    heightEl.classList.add('height');
+
     descriptionEl.textContent = vtuber.description;
     descriptionEl.classList.add('description');
-
-    //rest of the elements here
 
     img.src = `../assets/${vtuber.last_name}.png`;
     img.classList.add('vtuberBigImg');
     
-    div.append(nameEl, img, descriptionEl);
+    div.append(nameEl, img, debutEl, unitEl, heightEl, descriptionEl);
     return div;
 
 }
