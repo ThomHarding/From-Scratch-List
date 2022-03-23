@@ -106,6 +106,7 @@ footer {
     align-items: center;
     flex-direction: column;
     align-content: flex-start;
+    width: fit-content;
 }
 
 #vtuber-list-container {

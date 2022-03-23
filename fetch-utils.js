@@ -7,7 +7,7 @@ export async function getVtubers() {
     const response = await client
         .from('Virtual Youtubers')
         .select();
-    return response;   
+    return response.data;   
 }
 
 export async function getVtuber(id) {
@@ -16,5 +16,5 @@ export async function getVtuber(id) {
         .select()
         .match({ id: id })
         .single();
-    return response;   
+    return response.data;   
 }
