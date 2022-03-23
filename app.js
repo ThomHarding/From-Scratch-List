@@ -1,8 +1,16 @@
-// import functions and grab DOM elements
+import { getVtubers } from './fetch-utils.js';
+import { renderVtuberCard } from './render-utils.js';
 
-// let state
+const vtuberListContainer = document.getElementById('vtuber-list-container');
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+window.addEventListener('load', async () => {
+    await loadAllVtubers();
+});
+
+async function loadAllVtubers() {
+    let vtuberList = await getVtubers();
+    for (let vtuber of vtuberList) {
+        let vtuberDiv = renderVtuberCard(vtuber);
+        vtuberListContainer.appendChild(vtuberDiv);
+    }
+}

@@ -78,7 +78,7 @@ header img {
 p {
     margin: var(--gutter);
 }
-  
+
 footer {
     position: fixed;
     width: 100%;
@@ -88,4 +88,32 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+
+.vtuberBigImg {
+    width: 30%;
+}
+
+.vtuber-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.vtuber-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: flex-start;
+    width: fit-content;
+}
+
+#vtuber-list-container {
+    display: flex;
+    align-items: center;
+    
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
 }
