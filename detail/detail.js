@@ -3,7 +3,7 @@ import { renderVtuberDetail } from '../render-utils.js';
 
 const vtuberDetailContainer = document.getElementById('vtuber-detail-container');
 
-window.addEventListener('load', async() => {
+window.addEventListener('load', async () => {
     const data = new URLSearchParams(window.location.search);
     let id = data.get('id');
     let vtuber = await getVtuber(id);
